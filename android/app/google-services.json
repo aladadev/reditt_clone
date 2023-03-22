@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "682797664930",
+    "project_id": "reditt-clone-aladadev",
+    "storage_bucket": "reditt-clone-aladadev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682797664930:android:95ab09b100ae38476ca5fb",
+        "android_client_info": {
+          "package_name": "com.example.reditt_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682797664930-v45uo4bka5tnkmnl93d2dthhd0hbbn6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reditt_clone",
+            "certificate_hash": "b0270d04ce3da025dad43976657705a075797619"
+          }
+        },
+        {
+          "client_id": "682797664930-dem5rh2p1qhjemojgj56rrcskffva7cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI752eDhRJzlnDAt9fyZUrW8mPd_9w2mA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682797664930-dem5rh2p1qhjemojgj56rrcskffva7cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
