@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reditt_clone/core/constants/picture_constants.dart';
+import 'package:reditt_clone/features/auth/controller/auth_controller.dart';
 import 'package:reditt_clone/theme/colors_palette.dart';
 
-class LoginButton extends StatelessWidget {
+class LoginButton extends ConsumerWidget {
   const LoginButton({super.key});
+  void SignInWithGoogle(WidgetRef ref) {
+    ref.read(authControllerProvider).signInWithGoogle();
+  }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: ElevatedButton.icon(
@@ -17,7 +22,7 @@ class LoginButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        onPressed: () {},
+        onPressed: () => SignInWithGoogle(ref),
         icon: Image.asset(
           PictureConstants.googleLogo,
           width: 40,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reditt_clone/features/auth/screens/login_screen.dart';
 import 'package:reditt_clone/firebase_options.dart';
 import 'package:reditt_clone/theme/colors_palette.dart';
@@ -11,7 +12,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
