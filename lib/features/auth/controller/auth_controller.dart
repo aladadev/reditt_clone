@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reditt_clone/features/auth/repository/auth_repository.dart';
 
 final authControllerProvider = Provider((ref) {
-  return AuthController(authRepository: ref.watch(authRepositoryProvider));
+  return AuthController(authRepository: ref.read(authRepositoryProvider));
 });
 
 class AuthController {
@@ -12,7 +12,8 @@ class AuthController {
     required AuthRepository authRepository,
   }) : _authRepository = authRepository;
 
-  void signInWithGoogle() {
-    _authRepository.signInWithGoogle();
+  void signInWithGoogle() async {
+    final user = await _authRepository.signInWithGoogle();
+    user.fold((l) => null, (r) => null);
   }
 }
